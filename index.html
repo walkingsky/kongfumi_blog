@@ -67,6 +67,87 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-静态博客网站工具" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2022/02/14/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E5%B7%A5%E5%85%B7/" class="article-date">
+  <time datetime="2022-02-13T17:19:16.000Z" itemprop="datePublished">2022-02-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/02/14/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E5%B7%A5%E5%85%B7/">静态博客网站工具</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="hexo"><a href="#hexo" class="headerlink" title="hexo"></a>hexo</h4><p>官方主页：<a href="https://hexo.io/zh-cn/">https://hexo.io/zh-cn/</a></p>
+<p>基于nodejs，部分主题对nodejs版本要求比较高，安装包升级包容易出现兼容性问题；</p>
+<p><u><strong>最大的问题就是编译速度太慢了</strong></u>。超过1W的文件量，windows底下就直接报“too many open files”错误，在linux下编译也是小时级别的，无法忍受。</p>
+<p>找到的合适的主题：<a href="https://github.com/blinkfox/hexo-theme-matery">https://github.com/blinkfox/hexo-theme-matery</a></p>
+<p>本地实施目录： F:\study\js\hexo_html  临时对比目录 F:\study\js\hexo2htm<strong>l</strong></p>
+<p><strong>关于配置文件</strong></p>
+<p>根目录的配置文件和主题目录的配置文件一同生效，并且如果有相同配置，是以主题目录的配置为主的。这点试了好多次才发现的规律</p>
+<p><strong>遇到的问题</strong>：文件明太长，git无法cp文件，（windows文件名有255的长度限制）</p>
+<p>报错信息：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">unable to stat “xxxxxxxxxxxxxxxxxxx/index.html” Filename too long</span><br></pre></td></tr></table></figure>
+
+<p>解决方法：<a href="https://confluence.atlassian.com/bamkb/git-checkouts-fail-on-windows-with-filename-too-long-error-unable-to-create-file-errors-867363792.html">https://confluence.atlassian.com/bamkb/git-checkouts-fail-on-windows-with-filename-too-long-error-unable-to-create-file-errors-867363792.html</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --system core.longpaths true</span><br><span class="line">git config --global core.longpaths true</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<h4 id="hugo"><a href="#hugo" class="headerlink" title="hugo"></a>hugo</h4><p>官网文档：<a href="https://gohugo.io/getting-started/quick-start/">https://gohugo.io/getting-started/quick-start/</a></p>
+<p>合适的主题：<a href="https://themes.gohugo.io/themes/parsa-hugo/">https://themes.gohugo.io/themes/parsa-hugo/</a></p>
+<p>​            ：文档：<a href="https://docs.gethugothemes.com/parsa/?ref=github">https://docs.gethugothemes.com/parsa/?ref=github</a></p>
+<ul>
+<li>另一个参考的主题：<a href="https://themes.gohugo.io/themes/hugo-theme-dream/">https://themes.gohugo.io/themes/hugo-theme-dream/</a> （问题多，而且demo和文档都无法查到了）</li>
+</ul>
+<p>本地实施并修改的目录：</p>
+<p>cloudflare上部署的时候遇到版本太低的问题，用环境变量来指定版本。官方文档说明如下</p>
+<ul>
+<li><pre><code>Hugo builds automatically run an old version. To run the latest version of Hugo (for example, `0.80.0`), you will need to set an environment variable. Set `HUGO_VERSION` to `0.80.0` or the Hugo version of your choice.
+</code></pre>
+</li>
+</ul>
+<hr>
+<p>更高阶的静态网站生成器</p>
+<p><strong>gatsby</strong></p>
+<p>Gatsby 是一个为 React 打造的快如闪电的现代化站点生成器</p>
+<p>官网：<a href="https://www.gatsbyjs.com/how-it-works/">https://www.gatsbyjs.com/how-it-works/</a></p>
+<p>中文网站：<a href="https://www.gatsbyjs.cn/docs/">https://www.gatsbyjs.cn/docs/</a></p>
+<p><strong>gridsome</strong></p>
+<p>基于 Vue.js 构建的 Jamstack 框架<br>Gridsome 让开发人员可以轻松地构建静态生成的网站和应用程序，这些网站和应用程序 天生速度快</p>
+<p>官网：<a href="https://gridsome.org/">https://gridsome.org/</a></p>
+<p>中文网站：<a href="https://www.gridsome.cn/">https://www.gridsome.cn/</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://blog.kongfumi.com/2022/02/14/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E5%B7%A5%E5%85%B7/" data-id="ckzlja41r0000zcst77gm2ojl" class="article-share-link">分享</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hugo/" rel="tag">hugo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99/" rel="tag">静态网站</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-nodejs升级" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2022/02/10/nodejs%E5%8D%87%E7%BA%A7/" class="article-date">
@@ -112,7 +193,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://blog.kongfumi.com/2022/02/10/nodejs%E5%8D%87%E7%BA%A7/" data-id="ckzlh2w2v0002l4stcr590gt5" class="article-share-link">分享</a>
+      <a data-url="https://blog.kongfumi.com/2022/02/10/nodejs%E5%8D%87%E7%BA%A7/" data-id="ckzlj4dzj0001xsst8ru8ac79" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodejs/" rel="tag">nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/npm/" rel="tag">npm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8D%87%E7%BA%A7/" rel="tag">升级</a></li></ul>
@@ -189,7 +270,7 @@
 </li>
 <li><p>东方财富基金历史数据获取接口 <a href="http://fund.eastmoney.com/f10/F10DataApi.aspx?type=lsjz&amp;code=005176&amp;page=1&amp;per=49">http://fund.eastmoney.com/f10/F10DataApi.aspx?type=lsjz&amp;code=005176&amp;page=1&amp;per=49</a></p>
 </li>
-<li><p>ssh 建立mysql的隧道   ssh -i /D/work/id_dsa_1024 -2 -x -N -L 13306:10.0.232.165:3306 <a href="mailto:&#116;&#x61;&#x6e;&#103;&#120;&#117;&#x6e;&#x69;&#110;&#x67;&#x40;&#52;&#55;&#x2e;&#x39;&#x39;&#46;&#49;&#57;&#54;&#x2e;&#49;&#56;&#x35;">&#116;&#x61;&#x6e;&#103;&#120;&#117;&#x6e;&#x69;&#110;&#x67;&#x40;&#52;&#55;&#x2e;&#x39;&#x39;&#46;&#49;&#57;&#54;&#x2e;&#49;&#56;&#x35;</a></p>
+<li><p>ssh 建立mysql的隧道   ssh -i /D/work/id_dsa_1024 -2 -x -N -L 13306:10.0.232.165:3306 <a href="mailto:&#x74;&#x61;&#110;&#x67;&#x78;&#117;&#x6e;&#105;&#x6e;&#103;&#64;&#x34;&#x37;&#x2e;&#x39;&#57;&#x2e;&#49;&#57;&#x36;&#46;&#49;&#56;&#x35;">&#x74;&#x61;&#110;&#x67;&#x78;&#117;&#x6e;&#105;&#x6e;&#103;&#64;&#x34;&#x37;&#x2e;&#x39;&#57;&#x2e;&#49;&#57;&#x36;&#46;&#49;&#56;&#x35;</a></p>
 </li>
 <li><p>markdown 生成html 静态页面  <a href="https://www.wanghuiblog.com/post/static-webiste-generator/">https://www.wanghuiblog.com/post/static-webiste-generator/</a></p>
 </li>
@@ -205,7 +286,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://blog.kongfumi.com/2022/02/09/%E6%8A%80%E6%9C%AF%E5%9B%9E%E6%94%B6%E7%AB%99/" data-id="ckzlh2w3k000ll4stbp0m8aeo" class="article-share-link">分享</a>
+      <a data-url="https://blog.kongfumi.com/2022/02/09/%E6%8A%80%E6%9C%AF%E5%9B%9E%E6%94%B6%E7%AB%99/" data-id="ckzlj4e0d000lxsstd2sydfac" class="article-share-link">分享</a>
       
       
     </footer>
@@ -245,7 +326,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://blog.kongfumi.com/2022/02/09/linux%E6%96%90%E8%AE%AF/" data-id="ckzlh2w2s0001l4stfk7l2ubv" class="article-share-link">分享</a>
+      <a data-url="https://blog.kongfumi.com/2022/02/09/linux%E6%96%90%E8%AE%AF/" data-id="ckzlj4dzn0002xsstbvib0sz6" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/armbian/" rel="tag">armbian</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%91%BD%E4%BB%A4/" rel="tag">命令</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%96%90%E8%AE%AF/" rel="tag">斐讯</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%9B%92%E5%AD%90/" rel="tag">盒子</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%93%9D%E7%89%99/" rel="tag">蓝牙</a></li></ul>
@@ -296,7 +377,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://blog.kongfumi.com/2020/11/02/hello-world/" data-id="ckzlh2w280000l4sthyzr7x0i" class="article-share-link">分享</a>
+      <a data-url="https://blog.kongfumi.com/2020/11/02/hello-world/" data-id="ckzlj4dz80000xsst79rwfvc5" class="article-share-link">分享</a>
       
       
     </footer>
@@ -319,7 +400,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/armbian/" rel="tag">armbian</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/" rel="tag">nodejs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm/" rel="tag">npm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%87%E7%BA%A7/" rel="tag">升级</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%91%BD%E4%BB%A4/" rel="tag">命令</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%96%90%E8%AE%AF/" rel="tag">斐讯</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9B%92%E5%AD%90/" rel="tag">盒子</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%93%9D%E7%89%99/" rel="tag">蓝牙</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/armbian/" rel="tag">armbian</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hugo/" rel="tag">hugo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/" rel="tag">nodejs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm/" rel="tag">npm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%87%E7%BA%A7/" rel="tag">升级</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%91%BD%E4%BB%A4/" rel="tag">命令</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%96%90%E8%AE%AF/" rel="tag">斐讯</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9B%92%E5%AD%90/" rel="tag">盒子</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%93%9D%E7%89%99/" rel="tag">蓝牙</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99/" rel="tag">静态网站</a></li></ul>
     </div>
   </div>
 
@@ -329,7 +410,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/armbian/" style="font-size: 10px;">armbian</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a> <a href="/tags/%E5%8D%87%E7%BA%A7/" style="font-size: 10px;">升级</a> <a href="/tags/%E5%91%BD%E4%BB%A4/" style="font-size: 10px;">命令</a> <a href="/tags/%E6%96%90%E8%AE%AF/" style="font-size: 10px;">斐讯</a> <a href="/tags/%E7%9B%92%E5%AD%90/" style="font-size: 10px;">盒子</a> <a href="/tags/%E8%93%9D%E7%89%99/" style="font-size: 10px;">蓝牙</a>
+      <a href="/tags/armbian/" style="font-size: 10px;">armbian</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/hugo/" style="font-size: 10px;">hugo</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a> <a href="/tags/%E5%8D%87%E7%BA%A7/" style="font-size: 10px;">升级</a> <a href="/tags/%E5%91%BD%E4%BB%A4/" style="font-size: 10px;">命令</a> <a href="/tags/%E6%96%90%E8%AE%AF/" style="font-size: 10px;">斐讯</a> <a href="/tags/%E7%9B%92%E5%AD%90/" style="font-size: 10px;">盒子</a> <a href="/tags/%E8%93%9D%E7%89%99/" style="font-size: 10px;">蓝牙</a> <a href="/tags/%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99/" style="font-size: 10px;">静态网站</a>
     </div>
   </div>
 
@@ -349,6 +430,10 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2022/02/14/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E5%B7%A5%E5%85%B7/">静态博客网站工具</a>
+          </li>
         
           <li>
             <a href="/2022/02/10/nodejs%E5%8D%87%E7%BA%A7/">nodejs升级</a>
