@@ -7,19 +7,20 @@
   
   <title>静态博客网站工具 | 功夫米</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="hexo官方主页：https:&#x2F;&#x2F;hexo.io&#x2F;zh-cn&#x2F; 基于nodejs，部分主题对nodejs版本要求比较高，安装包升级包容易出现兼容性问题； 最大的问题就是编译速度太慢了。超过1W的文件量，windows底下就直接报“too many open files”错误，在linux下编译也是小时级别的，无法忍受。 找到的合适的主题：https:&#x2F;&#x2F;github.com&#x2F;blinkfox&#x2F;he">
+  <meta name="description" content="记录最近刚刚使用、接触过的几个markdown文档转静态网页（网站）的工具。也记录了一些遇到过的问题。 [TOC]  hexo官方主页：https:&#x2F;&#x2F;hexo.io&#x2F;zh-cn&#x2F; 基于nodejs，部分主题对nodejs版本要求比较高，安装包升级包容易出现兼容性问题； 最大的问题就是编译速度太慢了。超过1W的文件量，windows底下就直接报“too many open files”错误，在li">
 <meta property="og:type" content="article">
 <meta property="og:title" content="静态博客网站工具">
 <meta property="og:url" content="https://blog.kongfumi.com/2022/02/14/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E5%B7%A5%E5%85%B7/index.html">
 <meta property="og:site_name" content="功夫米">
-<meta property="og:description" content="hexo官方主页：https:&#x2F;&#x2F;hexo.io&#x2F;zh-cn&#x2F; 基于nodejs，部分主题对nodejs版本要求比较高，安装包升级包容易出现兼容性问题； 最大的问题就是编译速度太慢了。超过1W的文件量，windows底下就直接报“too many open files”错误，在linux下编译也是小时级别的，无法忍受。 找到的合适的主题：https:&#x2F;&#x2F;github.com&#x2F;blinkfox&#x2F;he">
+<meta property="og:description" content="记录最近刚刚使用、接触过的几个markdown文档转静态网页（网站）的工具。也记录了一些遇到过的问题。 [TOC]  hexo官方主页：https:&#x2F;&#x2F;hexo.io&#x2F;zh-cn&#x2F; 基于nodejs，部分主题对nodejs版本要求比较高，安装包升级包容易出现兼容性问题； 最大的问题就是编译速度太慢了。超过1W的文件量，windows底下就直接报“too many open files”错误，在li">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-02-13T17:19:16.000Z">
-<meta property="article:modified_time" content="2022-02-13T17:20:29.034Z">
+<meta property="article:modified_time" content="2022-03-10T01:59:14.004Z">
 <meta property="article:author" content="walkingsky">
 <meta property="article:tag" content="静态网站">
 <meta property="article:tag" content="hexo">
 <meta property="article:tag" content="hugo">
+<meta property="article:tag" content="markdown">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="功夫米" type="application/atom+xml">
@@ -93,7 +94,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="hexo"><a href="#hexo" class="headerlink" title="hexo"></a>hexo</h4><p>官方主页：<a href="https://hexo.io/zh-cn/">https://hexo.io/zh-cn/</a></p>
+        <h4 id="记录最近刚刚使用、接触过的几个markdown文档转静态网页（网站）的工具。"><a href="#记录最近刚刚使用、接触过的几个markdown文档转静态网页（网站）的工具。" class="headerlink" title="记录最近刚刚使用、接触过的几个markdown文档转静态网页（网站）的工具。"></a><strong>记录最近刚刚使用、接触过的几个markdown文档转静态网页（网站）的工具。</strong></h4><p>也记录了一些遇到过的问题。</p>
+<p>[TOC]</p>
+<hr>
+<h4 id="hexo"><a href="#hexo" class="headerlink" title="hexo"></a>hexo</h4><p>官方主页：<a href="https://hexo.io/zh-cn/">https://hexo.io/zh-cn/</a></p>
 <p>基于nodejs，部分主题对nodejs版本要求比较高，安装包升级包容易出现兼容性问题；</p>
 <p><u><strong>最大的问题就是编译速度太慢了</strong></u>。超过1W的文件量，windows底下就直接报“too many open files”错误，在linux下编译也是小时级别的，无法忍受。</p>
 <p>找到的合适的主题：<a href="https://github.com/blinkfox/hexo-theme-matery">https://github.com/blinkfox/hexo-theme-matery</a></p>
@@ -128,22 +132,20 @@
 </ul>
 <hr>
 <p>更高阶的静态网站生成器</p>
-<p><strong>gatsby</strong></p>
-<p>Gatsby 是一个为 React 打造的快如闪电的现代化站点生成器</p>
+<h4 id="gatsby"><a href="#gatsby" class="headerlink" title="gatsby"></a><strong>gatsby</strong></h4><p>Gatsby 是一个为 React 打造的快如闪电的现代化站点生成器</p>
 <p>官网：<a href="https://www.gatsbyjs.com/how-it-works/">https://www.gatsbyjs.com/how-it-works/</a></p>
 <p>中文网站：<a href="https://www.gatsbyjs.cn/docs/">https://www.gatsbyjs.cn/docs/</a></p>
-<p><strong>gridsome</strong></p>
-<p>基于 Vue.js 构建的 Jamstack 框架<br>Gridsome 让开发人员可以轻松地构建静态生成的网站和应用程序，这些网站和应用程序 天生速度快</p>
+<h4 id="gridsome"><a href="#gridsome" class="headerlink" title="gridsome"></a><strong>gridsome</strong></h4><p>基于 Vue.js 构建的 Jamstack 框架<br>Gridsome 让开发人员可以轻松地构建静态生成的网站和应用程序，这些网站和应用程序 天生速度快</p>
 <p>官网：<a href="https://gridsome.org/">https://gridsome.org/</a></p>
 <p>中文网站：<a href="https://www.gridsome.cn/">https://www.gridsome.cn/</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://blog.kongfumi.com/2022/02/14/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E5%B7%A5%E5%85%B7/" data-id="cl0cjk9xy00089wst2fqj0tqm" class="article-share-link">分享</a>
+      <a data-url="https://blog.kongfumi.com/2022/02/14/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E5%B7%A5%E5%85%B7/" data-id="cl0kcomko0008iostdhld845p" class="article-share-link">分享</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hugo/" rel="tag">hugo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99/" rel="tag">静态网站</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hugo/" rel="tag">hugo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/markdown/" rel="tag">markdown</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99/" rel="tag">静态网站</a></li></ul>
 
     </footer>
   </div>
@@ -182,7 +184,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Shadowrocket/" rel="tag">Shadowrocket</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Trojan/" rel="tag">Trojan</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/amazon/" rel="tag">amazon</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/armbian/" rel="tag">armbian</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/aws/" rel="tag">aws</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/" rel="tag">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hugo/" rel="tag">hugo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/" rel="tag">mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/" rel="tag">nodejs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm/" rel="tag">npm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/openwrt/" rel="tag">openwrt</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shadowsocks/" rel="tag">shadowsocks</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/stock/" rel="tag">stock</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/trojan/" rel="tag">trojan</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%91%E5%8A%A0%E9%80%9F/" rel="tag">云加速</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%9A%E9%A9%AC%E9%80%8A/" rel="tag">亚马逊</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%87%E7%BA%A7/" rel="tag">升级</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%91%BD%E4%BB%A4/" rel="tag">命令</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AE%B9%E5%99%A8/" rel="tag">容器</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%96%90%E8%AE%AF/" rel="tag">斐讯</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9C%8D%E5%8A%A1%E7%AB%AF/" rel="tag">服务端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9B%92%E5%AD%90/" rel="tag">盒子</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%93%9D%E7%89%99/" rel="tag">蓝牙</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99/" rel="tag">静态网站</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Shadowrocket/" rel="tag">Shadowrocket</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Trojan/" rel="tag">Trojan</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/amazon/" rel="tag">amazon</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/armbian/" rel="tag">armbian</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/aws/" rel="tag">aws</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/" rel="tag">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hugo/" rel="tag">hugo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/laravel/" rel="tag">laravel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/" rel="tag">markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/" rel="tag">mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/" rel="tag">nodejs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm/" rel="tag">npm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/openwrt/" rel="tag">openwrt</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shadowsocks/" rel="tag">shadowsocks</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/stock/" rel="tag">stock</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/trojan/" rel="tag">trojan</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webhook/" rel="tag">webhook</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%91%E5%8A%A0%E9%80%9F/" rel="tag">云加速</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%9A%E9%A9%AC%E9%80%8A/" rel="tag">亚马逊</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%87%E7%BA%A7/" rel="tag">升级</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%91%BD%E4%BB%A4/" rel="tag">命令</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AE%B9%E5%99%A8/" rel="tag">容器</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag">技术</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%96%90%E8%AE%AFN1/" rel="tag">斐讯N1</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9C%8D%E5%8A%A1%E7%AB%AF/" rel="tag">服务端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9B%92%E5%AD%90/" rel="tag">盒子</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%93%9D%E7%89%99/" rel="tag">蓝牙</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%97%AD%E5%8C%85%E5%87%BD%E6%95%B0/" rel="tag">闭包函数</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99/" rel="tag">静态网站</a></li></ul>
     </div>
   </div>
 
@@ -192,7 +194,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Shadowrocket/" style="font-size: 10px;">Shadowrocket</a> <a href="/tags/Trojan/" style="font-size: 10px;">Trojan</a> <a href="/tags/amazon/" style="font-size: 20px;">amazon</a> <a href="/tags/armbian/" style="font-size: 10px;">armbian</a> <a href="/tags/aws/" style="font-size: 10px;">aws</a> <a href="/tags/docker/" style="font-size: 10px;">docker</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/hugo/" style="font-size: 10px;">hugo</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a> <a href="/tags/openwrt/" style="font-size: 10px;">openwrt</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/shadowsocks/" style="font-size: 10px;">shadowsocks</a> <a href="/tags/stock/" style="font-size: 10px;">stock</a> <a href="/tags/trojan/" style="font-size: 20px;">trojan</a> <a href="/tags/%E4%BA%91%E5%8A%A0%E9%80%9F/" style="font-size: 10px;">云加速</a> <a href="/tags/%E4%BA%9A%E9%A9%AC%E9%80%8A/" style="font-size: 10px;">亚马逊</a> <a href="/tags/%E5%8D%87%E7%BA%A7/" style="font-size: 10px;">升级</a> <a href="/tags/%E5%91%BD%E4%BB%A4/" style="font-size: 10px;">命令</a> <a href="/tags/%E5%AE%B9%E5%99%A8/" style="font-size: 10px;">容器</a> <a href="/tags/%E6%96%90%E8%AE%AF/" style="font-size: 10px;">斐讯</a> <a href="/tags/%E6%9C%8D%E5%8A%A1%E7%AB%AF/" style="font-size: 10px;">服务端</a> <a href="/tags/%E7%9B%92%E5%AD%90/" style="font-size: 10px;">盒子</a> <a href="/tags/%E8%93%9D%E7%89%99/" style="font-size: 10px;">蓝牙</a> <a href="/tags/%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99/" style="font-size: 10px;">静态网站</a>
+      <a href="/tags/Shadowrocket/" style="font-size: 10px;">Shadowrocket</a> <a href="/tags/Trojan/" style="font-size: 10px;">Trojan</a> <a href="/tags/amazon/" style="font-size: 20px;">amazon</a> <a href="/tags/armbian/" style="font-size: 10px;">armbian</a> <a href="/tags/aws/" style="font-size: 10px;">aws</a> <a href="/tags/docker/" style="font-size: 10px;">docker</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/hugo/" style="font-size: 10px;">hugo</a> <a href="/tags/laravel/" style="font-size: 10px;">laravel</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a> <a href="/tags/openwrt/" style="font-size: 10px;">openwrt</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/shadowsocks/" style="font-size: 10px;">shadowsocks</a> <a href="/tags/stock/" style="font-size: 10px;">stock</a> <a href="/tags/trojan/" style="font-size: 20px;">trojan</a> <a href="/tags/webhook/" style="font-size: 10px;">webhook</a> <a href="/tags/%E4%BA%91%E5%8A%A0%E9%80%9F/" style="font-size: 10px;">云加速</a> <a href="/tags/%E4%BA%9A%E9%A9%AC%E9%80%8A/" style="font-size: 10px;">亚马逊</a> <a href="/tags/%E5%8D%87%E7%BA%A7/" style="font-size: 10px;">升级</a> <a href="/tags/%E5%91%BD%E4%BB%A4/" style="font-size: 10px;">命令</a> <a href="/tags/%E5%AE%B9%E5%99%A8/" style="font-size: 10px;">容器</a> <a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 10px;">技术</a> <a href="/tags/%E6%96%90%E8%AE%AFN1/" style="font-size: 10px;">斐讯N1</a> <a href="/tags/%E6%9C%8D%E5%8A%A1%E7%AB%AF/" style="font-size: 10px;">服务端</a> <a href="/tags/%E7%9B%92%E5%AD%90/" style="font-size: 10px;">盒子</a> <a href="/tags/%E8%93%9D%E7%89%99/" style="font-size: 10px;">蓝牙</a> <a href="/tags/%E9%97%AD%E5%8C%85%E5%87%BD%E6%95%B0/" style="font-size: 10px;">闭包函数</a> <a href="/tags/%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99/" style="font-size: 10px;">静态网站</a>
     </div>
   </div>
 
@@ -201,7 +203,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">三月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">二月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">十一月 2020</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">三月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">二月 2022</a></li></ul>
     </div>
   </div>
 

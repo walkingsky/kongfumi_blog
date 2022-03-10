@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://blog.kongfumi.com/2022/02/14/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E5%B7%A5%E5%85%B7/</loc>
+    <lastmod>2022-03-10</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.kongfumi.com/2022/02/09/%E6%8A%80%E6%9C%AF%E5%9B%9E%E6%94%B6%E7%AB%99/</loc>
+    <lastmod>2022-03-10</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.kongfumi.com/2022/02/09/%E6%96%90%E8%AE%AFN1%20%E7%9B%92%E5%AD%90%EF%BC%8Carmbian%20linux%20%E9%93%BE%E6%8E%A5%E8%93%9D%E7%89%99/</loc>
+    <lastmod>2022-03-10</lastmod>
+  </url>
+  <url>
     <loc>https://blog.kongfumi.com/2022/03/05/%E7%94%B3%E8%AF%B7%E4%BA%86amazon-EC2-%E5%85%8D%E8%B4%B9%E4%B8%80%E5%B9%B4%E4%B8%BB%E6%9C%BA%EF%BC%8C%E6%88%91%E7%94%A8%E4%BB%96%E5%B9%B2%E4%BA%86%E5%95%A5/</loc>
     <lastmod>2022-03-05</lastmod>
   </url>
@@ -13,23 +25,7 @@
     <lastmod>2022-03-03</lastmod>
   </url>
   <url>
-    <loc>https://blog.kongfumi.com/2022/02/14/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2022-02-13</lastmod>
-  </url>
-  <url>
     <loc>https://blog.kongfumi.com/2022/02/10/nodejs%E5%8D%87%E7%BA%A7/</loc>
     <lastmod>2022-02-10</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.kongfumi.com/2022/02/09/linux%E6%96%90%E8%AE%AF/</loc>
-    <lastmod>2022-02-09</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.kongfumi.com/2022/02/09/%E6%8A%80%E6%9C%AF%E5%9B%9E%E6%94%B6%E7%AB%99/</loc>
-    <lastmod>2022-02-09</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.kongfumi.com/2020/11/02/hello-world/</loc>
-    <lastmod>2020-11-02</lastmod>
   </url>
 </urlset> 
