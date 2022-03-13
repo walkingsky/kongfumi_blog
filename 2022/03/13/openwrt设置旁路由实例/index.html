@@ -5,18 +5,28 @@
   
 
   
-  <title>归档 | 功夫米</title>
+  <title>openwrt设置旁路由实例 | 功夫米</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一个blog站点，前后端以及环境运维方面技术资料、经验累积的一个技术博客网站。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="功夫米">
-<meta property="og:url" content="https://blog.kongfumi.com/archives/index.html">
+  <meta name="description" content="OpenWrt旁路由设置实例转载自：https:&#x2F;&#x2F;pfschina.org&#x2F;wp&#x2F;?p&#x3D;8031 在主路由和旁路由的搭配中，主路由负责上网和NAT转发的，旁路由起到的是网关的作用，可以用来分流数据和扩展插件。严格来说应该是旁路网关或网关服务器，它的核心是网关而不是路由。 在使用pfSense或OPNsense防火墙的网络环境中，如果有访问外网等需求时，可以通过设置OpenWrt作为旁路由来实现。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="openwrt设置旁路由实例">
+<meta property="og:url" content="https://blog.kongfumi.com/2022/03/13/openwrt%E8%AE%BE%E7%BD%AE%E6%97%81%E8%B7%AF%E7%94%B1%E5%AE%9E%E4%BE%8B/index.html">
 <meta property="og:site_name" content="功夫米">
-<meta property="og:description" content="一个blog站点，前后端以及环境运维方面技术资料、经验累积的一个技术博客网站。">
+<meta property="og:description" content="OpenWrt旁路由设置实例转载自：https:&#x2F;&#x2F;pfschina.org&#x2F;wp&#x2F;?p&#x3D;8031 在主路由和旁路由的搭配中，主路由负责上网和NAT转发的，旁路由起到的是网关的作用，可以用来分流数据和扩展插件。严格来说应该是旁路网关或网关服务器，它的核心是网关而不是路由。 在使用pfSense或OPNsense防火墙的网络环境中，如果有访问外网等需求时，可以通过设置OpenWrt作为旁路由来实现。">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/walkingsky/pic@main/blog/Jietu20211229-100144.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/walkingsky/pic@main/blog/Jietu20211229-100843.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/walkingsky/pic@main/blog/Jietu20211229-101650.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/walkingsky/pic@main/blog/Jietu20211229-101416.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/walkingsky/pic@main/blog/Jietu20211229-101956.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/walkingsky/pic@main/blog/Jietu20211229-102438.jpg">
+<meta property="article:published_time" content="2022-03-13T04:22:30.000Z">
+<meta property="article:modified_time" content="2022-03-13T04:36:09.468Z">
 <meta property="article:author" content="walkingsky">
-<meta property="article:tag" content="blog,前端,后端,技术,js,php,运维,服务器,架构,嵌入式,linux,nodejs">
+<meta property="article:tag" content="openwrt">
+<meta property="article:tag" content="旁路由">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/walkingsky/pic@main/blog/Jietu20211229-100144.jpg">
   
     <link rel="alternate" href="/atom.xml" title="功夫米" type="application/atom+xml">
   
@@ -67,173 +77,75 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2022" class="archive-year">2022</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/03/13/openwrt%E8%AE%BE%E7%BD%AE%E6%97%81%E8%B7%AF%E7%94%B1%E5%AE%9E%E4%BE%8B/" class="archive-article-date">
-  <time datetime="2022-03-13T04:22:30.000Z" itemprop="datePublished">3月 13</time>
+        <section id="main"><article id="post-openwrt设置旁路由实例" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2022/03/13/openwrt%E8%AE%BE%E7%BD%AE%E6%97%81%E8%B7%AF%E7%94%B1%E5%AE%9E%E4%BE%8B/" class="article-date">
+  <time datetime="2022-03-13T04:22:30.000Z" itemprop="datePublished">2022-03-13</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/03/13/openwrt%E8%AE%BE%E7%BD%AE%E6%97%81%E8%B7%AF%E7%94%B1%E5%AE%9E%E4%BE%8B/">openwrt设置旁路由实例</a>
+    <h1 class="article-title" itemprop="name">
+      openwrt设置旁路由实例
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/03/05/%E7%94%B3%E8%AF%B7%E4%BA%86amazon-EC2-%E5%85%8D%E8%B4%B9%E4%B8%80%E5%B9%B4%E4%B8%BB%E6%9C%BA%EF%BC%8C%E6%88%91%E7%94%A8%E4%BB%96%E5%B9%B2%E4%BA%86%E5%95%A5/" class="archive-article-date">
-  <time datetime="2022-03-05T04:36:41.000Z" itemprop="datePublished">3月 5</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/03/05/%E7%94%B3%E8%AF%B7%E4%BA%86amazon-EC2-%E5%85%8D%E8%B4%B9%E4%B8%80%E5%B9%B4%E4%B8%BB%E6%9C%BA%EF%BC%8C%E6%88%91%E7%94%A8%E4%BB%96%E5%B9%B2%E4%BA%86%E5%95%A5/">申请了amazon EC2 免费一年主机，我用他干了啥</a>
-    </h1>
-  
+        <h1 id="OpenWrt旁路由设置实例"><a href="#OpenWrt旁路由设置实例" class="headerlink" title="OpenWrt旁路由设置实例"></a>OpenWrt旁路由设置实例</h1><p>转载自：<a href="https://pfschina.org/wp/?p=8031">https://pfschina.org/wp/?p=8031</a></p>
+<p>在主路由和旁路由的搭配中，主路由负责上网和NAT转发的，旁路由起到的是网关的作用，可以用来分流数据和扩展插件。严格来说应该是旁路网关或网关服务器，它的核心是网关而不是路由。</p>
+<p>在使用pfSense或OPNsense防火墙的网络环境中，如果有访问外网等需求时，可以通过设置OpenWrt作为旁路由来实现。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/walkingsky/pic@main/blog/Jietu20211229-100144.jpg" alt="Jietu20211229-100144"></p>
+<p>使用OpenWrt作为旁路由，要注意以下几点：</p>
+<ul>
+<li>旁路由必须与主路由在同一网段，旁路由的LAN接口接入主路由的LAN网络。</li>
+<li>旁路由的网关设置为防火墙的LAN接口地址</li>
+<li>防火墙开启IP动态伪装</li>
+<li>DHCP设在主路由上，需要使用旁路网关的设备手动指定网关为旁路由的LAN接口地址。如果需要旁路由完全接管，则DHCP的默认网关设为旁路由LAN接口地址即可。</li>
+</ul>
+<p>下面介绍在OpenWrt上的详细设置步骤。</p>
+<h1 id="添加LAN接口网关"><a href="#添加LAN接口网关" class="headerlink" title="添加LAN接口网关"></a>添加LAN接口网关</h1><p>导航到网络&gt;接口&gt;LAN，添加LAN接口网关和DNS。IPv4网关填写主路由的LAN接口地址，DNS填写公共DNS。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/walkingsky/pic@main/blog/Jietu20211229-100843.jpg"></p>
+<h1 id="禁用LAN接口DHCP"><a href="#禁用LAN接口DHCP" class="headerlink" title="禁用LAN接口DHCP"></a>禁用LAN接口DHCP</h1><p><img src="https://cdn.jsdelivr.net/gh/walkingsky/pic@main/blog/Jietu20211229-101650.jpg" alt="Jietu20211229-101650"></p>
+<h1 id="删除WAN接口"><a href="#删除WAN接口" class="headerlink" title="删除WAN接口"></a>删除WAN接口</h1><p>导航到网络&gt;接口，删除WAN接口。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/walkingsky/pic@main/blog/Jietu20211229-101416.jpg" alt="Jietu20211229-101416"></p>
+<h1 id="修改防火墙设置"><a href="#修改防火墙设置" class="headerlink" title="修改防火墙设置"></a>修改防火墙设置</h1><p>导航到网络&gt;防火墙，取消选中启用SYN-flood 防御，选中LAN接口的IP动态伪装，如下图所示。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/walkingsky/pic@main/blog/Jietu20211229-101956.jpg" alt="Jietu20211229-101956"></p>
+<p>至此，OperWrt旁路由的设置就完成了。</p>
+<p>客户端如果要使用OpenWrt旁路由上网，必须在客户端设备上手动设定IP地址，并指定网关为OpenWrt的接口地址。如果想让旁路由完全接管，可以在主路由的DHCP设置中，手动指定网关为OpenWrt的接口地址，客户端就可以自动获取旁路由网关地址。下图所示为pfSense中DHCP的旁路由网关设置：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/walkingsky/pic@main/blog/Jietu20211229-102438.jpg" alt="Jietu20211229-102438"></p>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/03/04/amazon-EC2-%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E8%A3%85trojan%E6%9C%8D%E5%8A%A1%E7%AB%AF/" class="archive-article-date">
-  <time datetime="2022-03-04T14:20:43.000Z" itemprop="datePublished">3月 4</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/03/04/amazon-EC2-%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E8%A3%85trojan%E6%9C%8D%E5%8A%A1%E7%AB%AF/">amazon EC2 服务器安装trojan服务端</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/03/03/%E6%8E%A8%E8%8D%90%E4%B8%80%E4%B8%AA%E8%87%AA%E5%B7%B1%E7%94%A8%E7%9A%84%E4%BA%91%E5%8A%A0%E9%80%9F%E6%9C%8D%E5%8A%A1/" class="archive-article-date">
-  <time datetime="2022-03-03T06:38:28.000Z" itemprop="datePublished">3月 3</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://blog.kongfumi.com/2022/03/13/openwrt%E8%AE%BE%E7%BD%AE%E6%97%81%E8%B7%AF%E7%94%B1%E5%AE%9E%E4%BE%8B/" data-id="cl0osb4ev00008ostf4egf9ek" class="article-share-link">分享</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/03/03/%E6%8E%A8%E8%8D%90%E4%B8%80%E4%B8%AA%E8%87%AA%E5%B7%B1%E7%94%A8%E7%9A%84%E4%BA%91%E5%8A%A0%E9%80%9F%E6%9C%8D%E5%8A%A1/">推荐一个自己用的云加速服务</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/02/14/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E5%B7%A5%E5%85%B7/" class="archive-article-date">
-  <time datetime="2022-02-13T17:19:16.000Z" itemprop="datePublished">2月 14</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/02/14/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E5%B7%A5%E5%85%B7/">静态博客网站工具</a>
-    </h1>
-  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/openwrt/" rel="tag">openwrt</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%97%81%E8%B7%AF%E7%94%B1/" rel="tag">旁路由</a></li></ul>
 
-    </header>
+    </footer>
   </div>
-</article>
   
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/02/10/nodejs%E5%8D%87%E7%BA%A7/" class="archive-article-date">
-  <time datetime="2022-02-10T06:03:31.000Z" itemprop="datePublished">2月 10</time>
-</a>
-      
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/02/10/nodejs%E5%8D%87%E7%BA%A7/">nodejs升级</a>
-    </h1>
   
+    <a href="/2022/03/05/%E7%94%B3%E8%AF%B7%E4%BA%86amazon-EC2-%E5%85%8D%E8%B4%B9%E4%B8%80%E5%B9%B4%E4%B8%BB%E6%9C%BA%EF%BC%8C%E6%88%91%E7%94%A8%E4%BB%96%E5%B9%B2%E4%BA%86%E5%95%A5/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">申请了amazon EC2 免费一年主机，我用他干了啥</div>
+    </a>
+  
+</nav>
 
-    </header>
-  </div>
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/02/09/%E6%8A%80%E6%9C%AF%E5%9B%9E%E6%94%B6%E7%AB%99/" class="archive-article-date">
-  <time datetime="2022-02-09T09:19:15.000Z" itemprop="datePublished">2月 9</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/02/09/%E6%8A%80%E6%9C%AF%E5%9B%9E%E6%94%B6%E7%AB%99/">技术回收站-遇到过的一些技术资料的积累</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/02/09/%E6%96%90%E8%AE%AFN1%20%E7%9B%92%E5%AD%90%EF%BC%8Carmbian%20linux%20%E9%93%BE%E6%8E%A5%E8%93%9D%E7%89%99/" class="archive-article-date">
-  <time datetime="2022-02-09T09:15:25.000Z" itemprop="datePublished">2月 9</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/02/09/%E6%96%90%E8%AE%AFN1%20%E7%9B%92%E5%AD%90%EF%BC%8Carmbian%20linux%20%E9%93%BE%E6%8E%A5%E8%93%9D%E7%89%99/">linux斐讯</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
 
 </section>
         

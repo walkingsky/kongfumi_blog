@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://blog.kongfumi.com/2022/03/13/openwrt%E8%AE%BE%E7%BD%AE%E6%97%81%E8%B7%AF%E7%94%B1%E5%AE%9E%E4%BE%8B/</loc>
+    <lastmod>2022-03-13</lastmod>
+  </url>
+  <url>
     <loc>https://blog.kongfumi.com/2022/02/14/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2022-03-10</lastmod>
   </url>
