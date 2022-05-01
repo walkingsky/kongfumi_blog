@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://blog.kongfumi.com/2022/05/01/Shadowsocks-%E9%85%8D%E5%90%88-Proxifier-%E5%AE%9E%E7%8E%B0%E5%85%A8%E5%B1%80%E4%BB%A3%E7%90%86/</loc>
+    <lastmod>2022-05-01</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.kongfumi.com/2022/02/09/%E6%8A%80%E6%9C%AF%E5%9B%9E%E6%94%B6%E7%AB%99/</loc>
+    <lastmod>2022-03-26</lastmod>
+  </url>
+  <url>
     <loc>https://blog.kongfumi.com/2022/03/15/Docker%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4/</loc>
     <lastmod>2022-03-15</lastmod>
   </url>
@@ -10,10 +18,6 @@
   </url>
   <url>
     <loc>https://blog.kongfumi.com/2022/02/14/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2022-03-10</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.kongfumi.com/2022/02/09/%E6%8A%80%E6%9C%AF%E5%9B%9E%E6%94%B6%E7%AB%99/</loc>
     <lastmod>2022-03-10</lastmod>
   </url>
   <url>

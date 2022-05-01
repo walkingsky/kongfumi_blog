@@ -5,18 +5,29 @@
   
 
   
-  <title>Tag: 升级 | 功夫米</title>
+  <title>Shadowsocks 配合 Proxifier 实现全局代理 | 功夫米</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一个blog站点，前后端以及环境运维方面技术资料、经验累积的一个技术博客网站。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="功夫米">
-<meta property="og:url" content="https://blog.kongfumi.com/tags/%E5%8D%87%E7%BA%A7/index.html">
+  <meta name="description" content="什么是 ProxifierProxifier 是一款功能非常强大的 socks5 客户端，可以让不支持通过代理服务器工作的网络程序能通过 HTTPS 或 SOCKS 代理或代理链。支持 64位系统，支持Xp，Vista，Win7，MAC OS ,支持socks4，socks5，http代理协议，支持TCP，UDP协议，可以指定端口，指定IP，指定域名,指定程序等运行模式，兼容性非常好，和 SOCK">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Shadowsocks 配合 Proxifier 实现全局代理">
+<meta property="og:url" content="https://blog.kongfumi.com/2022/05/01/Shadowsocks-%E9%85%8D%E5%90%88-Proxifier-%E5%AE%9E%E7%8E%B0%E5%85%A8%E5%B1%80%E4%BB%A3%E7%90%86/index.html">
 <meta property="og:site_name" content="功夫米">
-<meta property="og:description" content="一个blog站点，前后端以及环境运维方面技术资料、经验累积的一个技术博客网站。">
+<meta property="og:description" content="什么是 ProxifierProxifier 是一款功能非常强大的 socks5 客户端，可以让不支持通过代理服务器工作的网络程序能通过 HTTPS 或 SOCKS 代理或代理链。支持 64位系统，支持Xp，Vista，Win7，MAC OS ,支持socks4，socks5，http代理协议，支持TCP，UDP协议，可以指定端口，指定IP，指定域名,指定程序等运行模式，兼容性非常好，和 SOCK">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/walkingsky/pic@main/blog/565c75c39e2fa.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/walkingsky/pic@main/blog/565c78968c9e6.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/walkingsky/pic@main/blog/565c762f20c39.jpg">
+<meta property="og:image" content="https://ooo.0o0.ooo/2015/11/30/565c75ed71e81.jpg">
+<meta property="og:image" content="https://ooo.0o0.ooo/2015/11/30/565c768b83f1d.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/walkingsky/pic@main/blog/565c75451538a.jpg">
+<meta property="article:published_time" content="2022-05-01T06:06:26.000Z">
+<meta property="article:modified_time" content="2022-05-01T06:08:49.182Z">
 <meta property="article:author" content="walkingsky">
-<meta property="article:tag" content="blog,前端,后端,技术,js,php,运维,服务器,架构,嵌入式,linux,nodejs">
+<meta property="article:tag" content="shadowsocks">
+<meta property="article:tag" content="代理">
+<meta property="article:tag" content="proxifier">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/walkingsky/pic@main/blog/565c75c39e2fa.jpg">
   
     <link rel="alternate" href="/atom.xml" title="功夫米" type="application/atom+xml">
   
@@ -67,40 +78,64 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2022" class="archive-year">2022</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/02/10/nodejs%E5%8D%87%E7%BA%A7/" class="archive-article-date">
-  <time datetime="2022-02-10T06:03:31.000Z" itemprop="datePublished">2月 10</time>
+        <section id="main"><article id="post-Shadowsocks-配合-Proxifier-实现全局代理" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2022/05/01/Shadowsocks-%E9%85%8D%E5%90%88-Proxifier-%E5%AE%9E%E7%8E%B0%E5%85%A8%E5%B1%80%E4%BB%A3%E7%90%86/" class="article-date">
+  <time datetime="2022-05-01T06:06:26.000Z" itemprop="datePublished">2022-05-01</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/02/10/nodejs%E5%8D%87%E7%BA%A7/">nodejs升级</a>
+    <h1 class="article-title" itemprop="name">
+      Shadowsocks 配合 Proxifier 实现全局代理
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="什么是-Proxifier"><a href="#什么是-Proxifier" class="headerlink" title="什么是 Proxifier"></a>什么是 Proxifier</h3><p>Proxifier 是一款功能非常强大的 socks5 客户端，可以让不支持通过代理服务器工作的网络程序能通过 HTTPS 或 SOCKS 代理或代理链。支持 64位系统，支持Xp，Vista，Win7，MAC OS ,支持socks4，socks5，http代理协议，支持TCP，UDP协议，可以指定端口，指定IP，指定域名,指定程序等运行模式，兼容性非常好，和 SOCKSCAP 属于同类软件，不过 SOCKSCAP 已经很久没更新了，不支持64位系统。 有许多网络应用程序不支持通过代理服务器工作，Proxifier 解决了这些问题和所有限制，让您有机会不受任何限制使用你喜爱的软件。此外，它让你获得了额外的网络安全控制，创建代理隧道，并添加使用更多网络功能的权力。</p>
+<h3 id="实现方法"><a href="#实现方法" class="headerlink" title="实现方法:"></a>实现方法:</h3><h4 id="Proxifier"><a href="#Proxifier" class="headerlink" title="Proxifier:"></a>Proxifier:</h4><p>官网地址：<a href="http://www.proxifier.com/">http://www.proxifier.com/</a><br>下载地址：<a href="http://www.proxifier.com/download.htm">http://www.proxifier.com/download.htm</a></p>
+<h5 id="Win"><a href="#Win" class="headerlink" title="Win"></a>Win</h5><p>软件分为 Standard Edition 和 Portable Edition 版本，注册码不通用，注册用户名任意。<br>L6Z8A-XY2J4-BTZ3P-ZZ7DF-A2Q9C（Portable Edition）<br>5EZ8G-C3WL5-B56YG-SCXM9-6QZAP（Standard Edition）</p>
+<h5 id="Mac-OS-X："><a href="#Mac-OS-X：" class="headerlink" title="Mac OS X："></a>Mac OS X：</h5><p>注册码：P427L-9Y552-5433E-8DSR3-58Z68</p>
+<p>若系统为 10.11，请下载<a href="https://www.proxifier.com/distr/ProxifierMacBeta.zip">Beta版</a></p>
+<p>若 Yosemite 下 Proxifier 不能运行，</p>
+<p>打开“终端”应用，运行这个命令然后重启就好了</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nvram boot-args=&quot;kext-dev-mode=1&quot;</span><br></pre></td></tr></table></figure>
 
+<h5 id="详细使用方法："><a href="#详细使用方法：" class="headerlink" title="详细使用方法："></a>详细使用方法：</h5><p>因为 win 和 mac 的使用方式是一样的，我就只演示 Mac OS X 下的使用方法啦～<br>首先点击 <code>proxies —— add </code>在其中填写 socks5 的代理地址，127.0.0.1:1080 请确保与图中一致。<br><img src="https://cdn.jsdelivr.net/gh/walkingsky/pic@main/blog/565c75c39e2fa.jpg" alt="img"><br><img src="https://cdn.jsdelivr.net/gh/walkingsky/pic@main/blog/565c78968c9e6.jpg" alt="img"><br><img src="https://cdn.jsdelivr.net/gh/walkingsky/pic@main/blog/565c762f20c39.jpg" alt="img"><br>接下来填写代理规则。<br><img src="https://ooo.0o0.ooo/2015/11/30/565c75ed71e81.jpg" alt="img"><br>其中最重要的就是请将 Shadowsocks 客户端设置为 direct 也就是直接连接。<br>如图，点击<code>➕</code> 添加 app，再在 <code>Action </code>中选择 <code>Direct</code><br><img src="https://ooo.0o0.ooo/2015/11/30/565c768b83f1d.jpg" alt="img"><br>其他 app 的添加就可以按心情来啦～比如我要让 steam 和 cfgo 走 Shadowsocks 以降低延迟，那么如图：<br>确保选择的是走 socks5 就可以了。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/walkingsky/pic@main/blog/565c75451538a.jpg" alt="img"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://blog.kongfumi.com/2022/05/01/Shadowsocks-%E9%85%8D%E5%90%88-Proxifier-%E5%AE%9E%E7%8E%B0%E5%85%A8%E5%B1%80%E4%BB%A3%E7%90%86/" data-id="cl2mw71nq000040st98qedqy8" class="article-share-link">分享</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/proxifier/" rel="tag">proxifier</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shadowsocks/" rel="tag">shadowsocks</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BB%A3%E7%90%86/" rel="tag">代理</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2022/03/15/Docker%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">Docker基本操作命令</div>
+    </a>
+  
+</nav>
+
+  
+</article>
 
 </section>
         

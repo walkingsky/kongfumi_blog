@@ -69,6 +69,55 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Shadowsocks-配合-Proxifier-实现全局代理" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2022/05/01/Shadowsocks-%E9%85%8D%E5%90%88-Proxifier-%E5%AE%9E%E7%8E%B0%E5%85%A8%E5%B1%80%E4%BB%A3%E7%90%86/" class="article-date">
+  <time datetime="2022-05-01T06:06:26.000Z" itemprop="datePublished">2022-05-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/05/01/Shadowsocks-%E9%85%8D%E5%90%88-Proxifier-%E5%AE%9E%E7%8E%B0%E5%85%A8%E5%B1%80%E4%BB%A3%E7%90%86/">Shadowsocks 配合 Proxifier 实现全局代理</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="什么是-Proxifier"><a href="#什么是-Proxifier" class="headerlink" title="什么是 Proxifier"></a>什么是 Proxifier</h3><p>Proxifier 是一款功能非常强大的 socks5 客户端，可以让不支持通过代理服务器工作的网络程序能通过 HTTPS 或 SOCKS 代理或代理链。支持 64位系统，支持Xp，Vista，Win7，MAC OS ,支持socks4，socks5，http代理协议，支持TCP，UDP协议，可以指定端口，指定IP，指定域名,指定程序等运行模式，兼容性非常好，和 SOCKSCAP 属于同类软件，不过 SOCKSCAP 已经很久没更新了，不支持64位系统。 有许多网络应用程序不支持通过代理服务器工作，Proxifier 解决了这些问题和所有限制，让您有机会不受任何限制使用你喜爱的软件。此外，它让你获得了额外的网络安全控制，创建代理隧道，并添加使用更多网络功能的权力。</p>
+<h3 id="实现方法"><a href="#实现方法" class="headerlink" title="实现方法:"></a>实现方法:</h3><h4 id="Proxifier"><a href="#Proxifier" class="headerlink" title="Proxifier:"></a>Proxifier:</h4><p>官网地址：<a href="http://www.proxifier.com/">http://www.proxifier.com/</a><br>下载地址：<a href="http://www.proxifier.com/download.htm">http://www.proxifier.com/download.htm</a></p>
+<h5 id="Win"><a href="#Win" class="headerlink" title="Win"></a>Win</h5><p>软件分为 Standard Edition 和 Portable Edition 版本，注册码不通用，注册用户名任意。<br>L6Z8A-XY2J4-BTZ3P-ZZ7DF-A2Q9C（Portable Edition）<br>5EZ8G-C3WL5-B56YG-SCXM9-6QZAP（Standard Edition）</p>
+<h5 id="Mac-OS-X："><a href="#Mac-OS-X：" class="headerlink" title="Mac OS X："></a>Mac OS X：</h5><p>注册码：P427L-9Y552-5433E-8DSR3-58Z68</p>
+<p>若系统为 10.11，请下载<a href="https://www.proxifier.com/distr/ProxifierMacBeta.zip">Beta版</a></p>
+<p>若 Yosemite 下 Proxifier 不能运行，</p>
+<p>打开“终端”应用，运行这个命令然后重启就好了</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nvram boot-args=&quot;kext-dev-mode=1&quot;</span><br></pre></td></tr></table></figure>
+
+<h5 id="详细使用方法："><a href="#详细使用方法：" class="headerlink" title="详细使用方法："></a>详细使用方法：</h5><p>因为 win 和 mac 的使用方式是一样的，我就只演示 Mac OS X 下的使用方法啦～<br>首先点击 <code>proxies —— add </code>在其中填写 socks5 的代理地址，127.0.0.1:1080 请确保与图中一致。<br><img src="https://cdn.jsdelivr.net/gh/walkingsky/pic@main/blog/565c75c39e2fa.jpg" alt="img"><br><img src="https://cdn.jsdelivr.net/gh/walkingsky/pic@main/blog/565c78968c9e6.jpg" alt="img"><br><img src="https://cdn.jsdelivr.net/gh/walkingsky/pic@main/blog/565c762f20c39.jpg" alt="img"><br>接下来填写代理规则。<br><img src="https://ooo.0o0.ooo/2015/11/30/565c75ed71e81.jpg" alt="img"><br>其中最重要的就是请将 Shadowsocks 客户端设置为 direct 也就是直接连接。<br>如图，点击<code>➕</code> 添加 app，再在 <code>Action </code>中选择 <code>Direct</code><br><img src="https://ooo.0o0.ooo/2015/11/30/565c768b83f1d.jpg" alt="img"><br>其他 app 的添加就可以按心情来啦～比如我要让 steam 和 cfgo 走 Shadowsocks 以降低延迟，那么如图：<br>确保选择的是走 socks5 就可以了。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/walkingsky/pic@main/blog/565c75451538a.jpg" alt="img"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://blog.kongfumi.com/2022/05/01/Shadowsocks-%E9%85%8D%E5%90%88-Proxifier-%E5%AE%9E%E7%8E%B0%E5%85%A8%E5%B1%80%E4%BB%A3%E7%90%86/" data-id="cl2mw71nq000040st98qedqy8" class="article-share-link">分享</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/proxifier/" rel="tag">proxifier</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shadowsocks/" rel="tag">shadowsocks</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BB%A3%E7%90%86/" rel="tag">代理</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Docker基本操作命令" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2022/03/15/Docker%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4/" class="article-date">
@@ -643,7 +692,7 @@
 </li>
 <li><p>东方财富基金历史数据获取接口 <a href="http://fund.eastmoney.com/f10/F10DataApi.aspx?type=lsjz&amp;code=005176&amp;page=1&amp;per=49">http://fund.eastmoney.com/f10/F10DataApi.aspx?type=lsjz&amp;code=005176&amp;page=1&amp;per=49</a></p>
 </li>
-<li><p>ssh 建立mysql的隧道   ssh -i /D/work/id_dsa_1024 -2 -x -N -L 13306:10.0.232.165:3306 <a href="mailto:&#x74;&#x61;&#x6e;&#x67;&#120;&#117;&#110;&#105;&#x6e;&#x67;&#64;&#x34;&#x37;&#46;&#x39;&#x39;&#46;&#x31;&#57;&#54;&#x2e;&#49;&#56;&#x35;">&#x74;&#x61;&#x6e;&#x67;&#120;&#117;&#110;&#105;&#x6e;&#x67;&#64;&#x34;&#x37;&#46;&#x39;&#x39;&#46;&#x31;&#57;&#54;&#x2e;&#49;&#56;&#x35;</a></p>
+<li><p>ssh 建立mysql的隧道   ssh -i /D/work/id_dsa_1024 -2 -x -N -L 13306:10.0.232.165:3306 <a href="mailto:&#116;&#x61;&#110;&#x67;&#x78;&#x75;&#110;&#105;&#x6e;&#x67;&#64;&#52;&#55;&#x2e;&#57;&#57;&#46;&#x31;&#x39;&#54;&#46;&#49;&#x38;&#x35;">&#116;&#x61;&#110;&#x67;&#x78;&#x75;&#110;&#105;&#x6e;&#x67;&#64;&#52;&#55;&#x2e;&#57;&#57;&#46;&#x31;&#x39;&#54;&#46;&#49;&#x38;&#x35;</a></p>
 </li>
 <li><p>markdown 生成html 静态页面  <a href="https://www.wanghuiblog.com/post/static-webiste-generator/">https://www.wanghuiblog.com/post/static-webiste-generator/</a></p>
 </li>
@@ -653,7 +702,6 @@
 </li>
 <li><p>cloudflare 功能强大的dns网站，可以做pages，web-worker，以及域名ssl加密的免费服务</p>
 </li>
-<li></li>
 </ul>
 
       
@@ -726,7 +774,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Docker/" rel="tag">Docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Shadowrocket/" rel="tag">Shadowrocket</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Trojan/" rel="tag">Trojan</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/amazon/" rel="tag">amazon</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/armbian/" rel="tag">armbian</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/aws/" rel="tag">aws</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/" rel="tag">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hugo/" rel="tag">hugo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/laravel/" rel="tag">laravel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/" rel="tag">markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/" rel="tag">mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/" rel="tag">nodejs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm/" rel="tag">npm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/openwrt/" rel="tag">openwrt</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shadowsocks/" rel="tag">shadowsocks</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/stock/" rel="tag">stock</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/trojan/" rel="tag">trojan</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webhook/" rel="tag">webhook</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%91%E5%8A%A0%E9%80%9F/" rel="tag">云加速</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%9A%E9%A9%AC%E9%80%8A/" rel="tag">亚马逊</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%87%E7%BA%A7/" rel="tag">升级</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%91%BD%E4%BB%A4/" rel="tag">命令</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AE%B9%E5%99%A8/" rel="tag">容器</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag">技术</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%96%90%E8%AE%AFN1/" rel="tag">斐讯N1</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%97%81%E8%B7%AF%E7%94%B1/" rel="tag">旁路由</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9C%8D%E5%8A%A1%E7%AB%AF/" rel="tag">服务端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9B%92%E5%AD%90/" rel="tag">盒子</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%93%9D%E7%89%99/" rel="tag">蓝牙</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%97%AD%E5%8C%85%E5%87%BD%E6%95%B0/" rel="tag">闭包函数</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99/" rel="tag">静态网站</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Docker/" rel="tag">Docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Shadowrocket/" rel="tag">Shadowrocket</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Trojan/" rel="tag">Trojan</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/amazon/" rel="tag">amazon</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/armbian/" rel="tag">armbian</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/aws/" rel="tag">aws</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/" rel="tag">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hugo/" rel="tag">hugo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/laravel/" rel="tag">laravel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/" rel="tag">markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/" rel="tag">mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/" rel="tag">nodejs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm/" rel="tag">npm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/openwrt/" rel="tag">openwrt</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/proxifier/" rel="tag">proxifier</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shadowsocks/" rel="tag">shadowsocks</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/stock/" rel="tag">stock</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/trojan/" rel="tag">trojan</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webhook/" rel="tag">webhook</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%91%E5%8A%A0%E9%80%9F/" rel="tag">云加速</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%9A%E9%A9%AC%E9%80%8A/" rel="tag">亚马逊</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BB%A3%E7%90%86/" rel="tag">代理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%87%E7%BA%A7/" rel="tag">升级</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%91%BD%E4%BB%A4/" rel="tag">命令</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AE%B9%E5%99%A8/" rel="tag">容器</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag">技术</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%96%90%E8%AE%AFN1/" rel="tag">斐讯N1</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%97%81%E8%B7%AF%E7%94%B1/" rel="tag">旁路由</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9C%8D%E5%8A%A1%E7%AB%AF/" rel="tag">服务端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9B%92%E5%AD%90/" rel="tag">盒子</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%93%9D%E7%89%99/" rel="tag">蓝牙</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%97%AD%E5%8C%85%E5%87%BD%E6%95%B0/" rel="tag">闭包函数</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99/" rel="tag">静态网站</a></li></ul>
     </div>
   </div>
 
@@ -736,7 +784,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Docker/" style="font-size: 10px;">Docker</a> <a href="/tags/Shadowrocket/" style="font-size: 10px;">Shadowrocket</a> <a href="/tags/Trojan/" style="font-size: 10px;">Trojan</a> <a href="/tags/amazon/" style="font-size: 20px;">amazon</a> <a href="/tags/armbian/" style="font-size: 10px;">armbian</a> <a href="/tags/aws/" style="font-size: 10px;">aws</a> <a href="/tags/docker/" style="font-size: 10px;">docker</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/hugo/" style="font-size: 10px;">hugo</a> <a href="/tags/laravel/" style="font-size: 10px;">laravel</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a> <a href="/tags/openwrt/" style="font-size: 20px;">openwrt</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/shadowsocks/" style="font-size: 10px;">shadowsocks</a> <a href="/tags/stock/" style="font-size: 10px;">stock</a> <a href="/tags/trojan/" style="font-size: 20px;">trojan</a> <a href="/tags/webhook/" style="font-size: 10px;">webhook</a> <a href="/tags/%E4%BA%91%E5%8A%A0%E9%80%9F/" style="font-size: 10px;">云加速</a> <a href="/tags/%E4%BA%9A%E9%A9%AC%E9%80%8A/" style="font-size: 10px;">亚马逊</a> <a href="/tags/%E5%8D%87%E7%BA%A7/" style="font-size: 10px;">升级</a> <a href="/tags/%E5%91%BD%E4%BB%A4/" style="font-size: 10px;">命令</a> <a href="/tags/%E5%AE%B9%E5%99%A8/" style="font-size: 10px;">容器</a> <a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 10px;">技术</a> <a href="/tags/%E6%96%90%E8%AE%AFN1/" style="font-size: 10px;">斐讯N1</a> <a href="/tags/%E6%97%81%E8%B7%AF%E7%94%B1/" style="font-size: 10px;">旁路由</a> <a href="/tags/%E6%9C%8D%E5%8A%A1%E7%AB%AF/" style="font-size: 10px;">服务端</a> <a href="/tags/%E7%9B%92%E5%AD%90/" style="font-size: 10px;">盒子</a> <a href="/tags/%E8%93%9D%E7%89%99/" style="font-size: 10px;">蓝牙</a> <a href="/tags/%E9%97%AD%E5%8C%85%E5%87%BD%E6%95%B0/" style="font-size: 10px;">闭包函数</a> <a href="/tags/%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99/" style="font-size: 10px;">静态网站</a>
+      <a href="/tags/Docker/" style="font-size: 10px;">Docker</a> <a href="/tags/Shadowrocket/" style="font-size: 10px;">Shadowrocket</a> <a href="/tags/Trojan/" style="font-size: 10px;">Trojan</a> <a href="/tags/amazon/" style="font-size: 20px;">amazon</a> <a href="/tags/armbian/" style="font-size: 10px;">armbian</a> <a href="/tags/aws/" style="font-size: 10px;">aws</a> <a href="/tags/docker/" style="font-size: 10px;">docker</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/hugo/" style="font-size: 10px;">hugo</a> <a href="/tags/laravel/" style="font-size: 10px;">laravel</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a> <a href="/tags/openwrt/" style="font-size: 20px;">openwrt</a> <a href="/tags/proxifier/" style="font-size: 10px;">proxifier</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/shadowsocks/" style="font-size: 20px;">shadowsocks</a> <a href="/tags/stock/" style="font-size: 10px;">stock</a> <a href="/tags/trojan/" style="font-size: 20px;">trojan</a> <a href="/tags/webhook/" style="font-size: 10px;">webhook</a> <a href="/tags/%E4%BA%91%E5%8A%A0%E9%80%9F/" style="font-size: 10px;">云加速</a> <a href="/tags/%E4%BA%9A%E9%A9%AC%E9%80%8A/" style="font-size: 10px;">亚马逊</a> <a href="/tags/%E4%BB%A3%E7%90%86/" style="font-size: 10px;">代理</a> <a href="/tags/%E5%8D%87%E7%BA%A7/" style="font-size: 10px;">升级</a> <a href="/tags/%E5%91%BD%E4%BB%A4/" style="font-size: 10px;">命令</a> <a href="/tags/%E5%AE%B9%E5%99%A8/" style="font-size: 10px;">容器</a> <a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 10px;">技术</a> <a href="/tags/%E6%96%90%E8%AE%AFN1/" style="font-size: 10px;">斐讯N1</a> <a href="/tags/%E6%97%81%E8%B7%AF%E7%94%B1/" style="font-size: 10px;">旁路由</a> <a href="/tags/%E6%9C%8D%E5%8A%A1%E7%AB%AF/" style="font-size: 10px;">服务端</a> <a href="/tags/%E7%9B%92%E5%AD%90/" style="font-size: 10px;">盒子</a> <a href="/tags/%E8%93%9D%E7%89%99/" style="font-size: 10px;">蓝牙</a> <a href="/tags/%E9%97%AD%E5%8C%85%E5%87%BD%E6%95%B0/" style="font-size: 10px;">闭包函数</a> <a href="/tags/%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99/" style="font-size: 10px;">静态网站</a>
     </div>
   </div>
 
@@ -745,7 +793,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">三月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">二月 2022</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">五月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">三月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">二月 2022</a></li></ul>
     </div>
   </div>
 
@@ -756,6 +804,10 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2022/05/01/Shadowsocks-%E9%85%8D%E5%90%88-Proxifier-%E5%AE%9E%E7%8E%B0%E5%85%A8%E5%B1%80%E4%BB%A3%E7%90%86/">Shadowsocks 配合 Proxifier 实现全局代理</a>
+          </li>
         
           <li>
             <a href="/2022/03/15/Docker%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4/">Docker基本操作命令</a>
@@ -771,10 +823,6 @@
         
           <li>
             <a href="/2022/03/04/amazon-EC2-%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E8%A3%85trojan%E6%9C%8D%E5%8A%A1%E7%AB%AF/">amazon EC2 服务器安装trojan服务端</a>
-          </li>
-        
-          <li>
-            <a href="/2022/03/03/%E6%8E%A8%E8%8D%90%E4%B8%80%E4%B8%AA%E8%87%AA%E5%B7%B1%E7%94%A8%E7%9A%84%E4%BA%91%E5%8A%A0%E9%80%9F%E6%9C%8D%E5%8A%A1/">推荐一个自己用的云加速服务</a>
           </li>
         
       </ul>
