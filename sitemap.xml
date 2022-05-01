@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.kongfumi.com/2022/05/01/QuantumultX-%E8%AE%BE%E7%BD%AE%E6%96%B9%E6%B3%95/</loc>
+    
+    <lastmod>2022-05-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.kongfumi.com/2022/05/01/Shadowsocks-%E9%85%8D%E5%90%88-Proxifier-%E5%AE%9E%E7%8E%B0%E5%85%A8%E5%B1%80%E4%BB%A3%E7%90%86/</loc>
     
     <lastmod>2022-05-01</lastmod>
@@ -347,6 +356,27 @@
   
   <url>
     <loc>https://blog.kongfumi.com/tags/proxifier/</loc>
+    <lastmod>2022-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.kongfumi.com/tags/ios/</loc>
+    <lastmod>2022-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.kongfumi.com/tags/ipad/</loc>
+    <lastmod>2022-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.kongfumi.com/tags/quantumultx/</loc>
     <lastmod>2022-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

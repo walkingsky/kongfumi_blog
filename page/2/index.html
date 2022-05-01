@@ -5,12 +5,12 @@
   
 
   
-  <title>Tag: 升级 | 功夫米</title>
+  <title>功夫米</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="一个blog站点，前后端以及环境运维方面技术资料、经验累积的一个技术博客网站。">
 <meta property="og:type" content="website">
 <meta property="og:title" content="功夫米">
-<meta property="og:url" content="https://blog.kongfumi.com/tags/%E5%8D%87%E7%BA%A7/index.html">
+<meta property="og:url" content="https://blog.kongfumi.com/page/2/index.html">
 <meta property="og:site_name" content="功夫米">
 <meta property="og:description" content="一个blog站点，前后端以及环境运维方面技术资料、经验累积的一个技术博客网站。">
 <meta property="og:locale" content="zh_CN">
@@ -69,38 +69,54 @@
       <div class="outer">
         <section id="main">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2022" class="archive-year">2022</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/02/10/nodejs%E5%8D%87%E7%BA%A7/" class="archive-article-date">
-  <time datetime="2022-02-10T06:03:31.000Z" itemprop="datePublished">2月 10</time>
+    <article id="post-斐讯N1 盒子，armbian linux 链接蓝牙" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2022/02/09/%E6%96%90%E8%AE%AFN1%20%E7%9B%92%E5%AD%90%EF%BC%8Carmbian%20linux%20%E9%93%BE%E6%8E%A5%E8%93%9D%E7%89%99/" class="article-date">
+  <time datetime="2022-02-09T09:15:25.000Z" itemprop="datePublished">2022-02-09</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
     <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/02/10/nodejs%E5%8D%87%E7%BA%A7/">nodejs升级</a>
+      <a class="article-title" href="/2022/02/09/%E6%96%90%E8%AE%AFN1%20%E7%9B%92%E5%AD%90%EF%BC%8Carmbian%20linux%20%E9%93%BE%E6%8E%A5%E8%93%9D%E7%89%99/">linux斐讯</a>
     </h1>
   
 
-    </header>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="斐讯N1-盒子，armbian-linux-链接蓝牙"><a href="#斐讯N1-盒子，armbian-linux-链接蓝牙" class="headerlink" title="斐讯N1 盒子，armbian linux 链接蓝牙"></a>斐讯N1 盒子，armbian linux 链接蓝牙</h5><p>耳机的地址：A8:4D:4A:FE:XX:XX</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">7. 运行sudo armbian-config，设置时区，配置连接wifi网络。完成后退出armbian-config，然后按照MaxGo的教程修改apt源为国内源，https://www.right.com.cn/forum/thread-342558-1-1.html 修改国内源完成后，分别执行sudo update和sudo upgrade更新系统。更新完毕后sudo reboot重启。</span><br><span class="line"></span><br><span class="line">8. 重启后，继续ssh连接，然后执行sudo armbian-config，进去后选择Network，接着选择BT Install，耐心等待蓝牙组件安装完毕，然后退出。</span><br><span class="line"></span><br><span class="line">9. 接着执行sudo apt install pulseaudio-module-bluetooth 安装pulseaudio组件。安装完成后，分别执行sudo killall pulseaudio和pulseaudio --start启动pulseaudio服务。</span><br><span class="line"></span><br><span class="line">10. 开始进入蓝牙连接阶段，首先执行sudo hciconfig -a查看蓝牙控制器信息，确认无误后，执行sudo hciconfig hci0 up打开蓝牙控制器，然后执行sudo bluetoothctl打开蓝牙管理器。</span><br><span class="line"></span><br><span class="line">11. 先后执行power on，discoverable on，agent on，然后执行scan on搜集周围的蓝牙设备，记录下要连接的设备地址后，执行trust &lt;设备地址&gt;信任设备，然后再执行pair &lt;设备地址&gt;配对，此时，要配对的设备上可能会弹出提示，点确认。</span><br><span class="line"></span><br><span class="line">12. 如以上步骤都没有问题，则执行connect &lt;设备地址&gt;，稍候即可顺利连接蓝牙，可以运行info &lt;设备地址&gt;确认状态。</span><br></pre></td></tr></table></figure>
+
+<p>不成功。连上之后又自动断开，找不到对应的声卡设备</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://blog.kongfumi.com/2022/02/09/%E6%96%90%E8%AE%AFN1%20%E7%9B%92%E5%AD%90%EF%BC%8Carmbian%20linux%20%E9%93%BE%E6%8E%A5%E8%93%9D%E7%89%99/" data-id="cl0kcomkj0005iost52zugi5e" class="article-share-link">分享</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/armbian/" rel="tag">armbian</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%91%BD%E4%BB%A4/" rel="tag">命令</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%96%90%E8%AE%AFN1/" rel="tag">斐讯N1</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%9B%92%E5%AD%90/" rel="tag">盒子</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%93%9D%E7%89%99/" rel="tag">蓝牙</a></li></ul>
+
+    </footer>
   </div>
+  
 </article>
-  
-  
-    </div></section>
+
+
   
 
+
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/">&amp;laquo; 上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
 
 </section>
         
