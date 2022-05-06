@@ -7,6 +7,8 @@
   
   <title>amazon EC2 服务器安装trojan服务端 | 功夫米</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta http-equiv="Content-Language" content="zh-CN">
+  <META name="revisit-after" Content="30 days" >
   <meta name="description" content="amazon aws EC2 服务器快速安装Trojan服务端准备工作 配置域名，指向aws服务器的ip。 我使用的是cloudflare的dns服务，添加一条A记录直接指向ec2的动态ip。注意：这里一定不要开启cf的dns代理（proxy）功能，否者后续的脚本申请SSL证书时会一直失败。   ec2服务器配置一条安全规则，开启TCP的443端口的外部访问。   ssh 链接到ec2服务器，这个">
 <meta property="og:type" content="article">
 <meta property="og:title" content="amazon EC2 服务器安装trojan服务端">
@@ -93,9 +95,9 @@
       <header class="article-header">
         
   
-    <h1 class="article-title" itemprop="name">
+    <h2 class="article-title" itemprop="name">
       amazon EC2 服务器安装trojan服务端
-    </h1>
+    </h2>
   
 
       </header>
